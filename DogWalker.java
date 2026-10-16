@@ -9,10 +9,11 @@ public class DogWalker {
 
     public int walkDogs(int hour) {
         int dogs = company.numAvailableDogs(hour);
-        if (dogs > maxDogs) {
+        if (dogs < maxDogs) {
             company.updateDogs(hour, dogs);
             return dogs;
-        } else {
+        } 
+        else {
             company.updateDogs(hour, maxDogs);
             return maxDogs;
         }

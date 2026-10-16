@@ -20,6 +20,5 @@ public class Main {
         int endHour = s.nextInt();
         int pay = walker.dogWalkShift(startHour, endHour);
         System.out.println(pay);
-        // s.close();
     }
 }
