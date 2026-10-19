@@ -13,13 +13,17 @@ public class Main {
 
         f = new File("walkers.txt");
         s = new Scanner(f);
-        int company = s.nextInt();
-        int maxDogs = s.nextInt();
-        DogWalker walker = new DogWalker(maxDogs, companies[company]);
-        int startHour = s.nextInt();
-        int endHour = s.nextInt();
-        int pay = walker.dogWalkShift(startHour, endHour);
-        System.out.println(pay);
-        // s.close();
+        int totalPay = 0;
+        for (int i = 0; i < 100; i++) 
+        {
+            int company = s.nextInt();
+            int maxDogs = s.nextInt();
+            DogWalker walker = new DogWalker(maxDogs, companies[company]);
+            int startHour = s.nextInt();
+            int endHour = s.nextInt();
+            int pay = walker.dogWalkShift(startHour, endHour);
+            totalPay += pay;
+        }
+        System.out.println(totalPay);
     }
 }
